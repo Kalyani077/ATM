@@ -2,17 +2,14 @@ import time
 class ATM():
     def v(self,usernames,passwords,pin,balance):
         user = input("Enter the username:")
-        time.sleep(1)
         if user not in usernames:
             print("invalid user")
         else:  
             index = usernames.index(user)  
             pas = input("enter password:")
-            time.sleep(1)
             if pas not in passwords[index]:
                 for i in range(2,-1,-1):
                     print("incorrect password",i,"attempts left")
-                    time.sleep(1)
                     if i == 0:
                         print("maximum limit reached")
                         break
@@ -20,23 +17,15 @@ class ATM():
                     pas = input("enter password:")
             else:
                 print("select an option:")
-                time.sleep(1)
                 print("1.Withdraw")
-                time.sleep(1)
                 print("2.deposit")
-                time.sleep(1)
                 print("3.Account balanace")
-                time.sleep(1)
                 print("4.change password")
-                time.sleep(1)
                 choice = int(input("enter your choice:"))
-                time.sleep(1)
                 if choice == 1:
                     amount = int(input("enter the amount:"))
-                    time.sleep(1)
                     avail_balance = balance[index]-amount
                     pin_number = int(input("enter your pin:"))
-                    time.sleep(1)
                     if pin_number != pin[index]:
                         print("invalid pin")
                     else:
