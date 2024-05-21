@@ -67,7 +67,7 @@ class ATM():
                 else:
                     print("invalid selection")
 usernames = ["kalyani07","kallu08","hema34"]
-passwords = ["23@hema","34@kallu","56@kalyani"]
+passwords = ["hema7","kallu7","kalyani7"]
 pin = [1295,3456,7843]
 balance = [1000,2567,567]
 B = ATM()
